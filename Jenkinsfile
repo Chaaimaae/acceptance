@@ -25,9 +25,6 @@ stages{
 	}
 	stage("Test d'acceptation") {
  		steps {
- 			sh "docker stop calculator"
- 			sh "docker rm -d -p 8888:8080 --name calculator localhost:5000/calculator"
- 			sh "docker run -p 8888:8080 --name calculator calculator"
  			sleep 60
  			//sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
  		}
